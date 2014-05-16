@@ -1,0 +1,15 @@
+{
+  "name": "todo-bem-mvc",
+  "version": "1.0.0",
+  "description": "TodoMVC with bem-mvc",
+  "bugs": "https://github.com/bem/project-stub/issues",
+  "ignore": [
+    ".bem/cache",
+    "node_modules",
+    "libs"
+  ],
+  "dependencies": {
+    "bem-core": "v2.2.1",
+    "bem-components": "git://github.com/bem/bem-components.git#v2"
+  }
+}

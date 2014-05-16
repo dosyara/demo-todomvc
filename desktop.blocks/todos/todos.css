@@ -1,0 +1,139 @@
+.todos
+{
+    width: 550px;
+    margin: auto;
+    position: relative;
+
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    border-bottom: 0;
+
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+}
+
+.todo:before {
+    content: '';
+    border-left: 1px solid #f5d6d6;
+    border-right: 1px solid #f5d6d6;
+    width: 2px;
+    position: absolute;
+    top: 0;
+    left: 40px;
+    height: 100%;
+}
+
+.todos__new-item
+{
+    padding: 16px;
+    position: relative;
+
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.todos__new-item::before
+{
+    content: '';
+    display: block;
+    height: 15px;
+    left: 0px;
+    right: 0px;
+    position: absolute;
+    top: -10px;
+
+
+    background: none repeat scroll 0 0 #8D7D77;
+    border-bottom: 1px solid #6C615C;
+    border-top-left-radius: 1px;
+    border-top-right-radius: 1px;
+    border-bottom: 0;
+}
+
+.todos__new-item-text
+{
+    width: 468px;
+    font-size: 24px;
+}
+
+.todos__done,
+.todos__all-done {
+    margin-right: 24px;
+}
+
+.todos__items
+{
+    border-bottom: 1px solid #ccc;
+}
+
+.todos__item
+{
+    padding: 16px;
+    border-top: 1px dotted #adadad;
+}
+
+.todos__item_completed .todos__item-text
+{
+    text-decoration: line-through;
+}
+
+.todos__item-text
+{
+    font-size: 24px;
+    display: inline-block;
+    width: 300px;
+}
+
+.todos__item-delete
+{
+    float: right;
+}
+
+.todos__items::before
+{
+    content: '';
+    position: absolute;
+    display: block;
+    height: 50px;
+    width: 100%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 6px 0 -3px rgba(255, 255, 255, 0.8), 0 7px 1px -3px rgba(0, 0, 0, 0.3), 0 43px 0 -6px rgba(255, 255, 255, 0.8), 0 44px 2px -6px rgba(0, 0, 0, 0.2);
+    bottom: 0;
+}
+
+.todos__actions
+{
+    width: 96%;
+    margin-left: 2%;
+    position: absolute;
+    bottom: -33px;
+    text-align: center;
+    z-index: 1;
+    font-size: 90%;
+    color: #83756f;
+    background-color: transparent;
+}
+
+.todos__items-left
+{
+    position: absolute;
+}
+
+.todos__filters
+{
+    display: inline-block;
+}
+
+.todos__filter
+{
+    display: inline;
+    margin-right: 1em;
+}
+
+.todos__filters .link
+{
+    color: #83756f;
+}
+
+.todos__clear-completed
+{
+    position: absolute;
+    right: 0;
+}
