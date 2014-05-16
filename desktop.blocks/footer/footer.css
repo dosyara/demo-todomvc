@@ -1,0 +1,13 @@
+.footer
+{
+    margin-top: 50px;
+    color: #a6a6a6;
+    font-size: 12px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+    text-align: center;
+}
+
+.footer .link
+{
+    color: #666;
+}

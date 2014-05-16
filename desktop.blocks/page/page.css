@@ -1,0 +1,6 @@
+.page
+{
+    background: url("page__bg.png") repeat scroll 0 0 #EAEAEA;
+    color: #4D4D4D;
+    font: 14px/1.4em 'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
