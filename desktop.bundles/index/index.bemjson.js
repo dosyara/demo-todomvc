@@ -30,18 +30,18 @@
                             items: [
                                 {
                                     todoId: 1,
-                                    done: true,
-                                    text: 'побриться'
+                                    done: false,
+                                    text: 'задать вопросы'
                                 },
                                 {
                                     todoId: 2,
-                                    done: true,
-                                    text: 'залить презентацию'
+                                    done: false,
+                                    text: 'поесть печенек'
                                 },
                                 {
                                     todoId: 3,
                                     done: false,
-                                    text: 'начать демонстрацию'
+                                    text: 'bit.ly/msk-bemup-feedback'
                                 }
                             ]
                         }
@@ -77,6 +77,17 @@
                         },
                         {
                             elem: 'items',
+                            mix: [{
+                                block: 'todos',
+                                elem: 'model-field',
+                                js: {
+                                    type: 'mod',
+                                    name: 'show',
+                                    block: 'todos',
+                                    elem: 'items',
+                                    modName: 'show'
+                                }
+                            }],
                             data: [ ]
                         },
                         {
@@ -85,7 +96,7 @@
                                 {
                                     elem: 'items-left',
                                     content: [
-                                        { tag: 'b', content: 1 },
+                                        { tag: 'b', content: 3 },
                                         ' item left'
                                     ]
                                 },
@@ -95,21 +106,18 @@
                                         {
                                             block: 'link',
                                             mix: { block: 'todos', elem: 'filter' },
-                                            mods: { pseudo: true },
                                             url: '#/',
                                             content: 'All'
                                         },
                                         {
                                             block: 'link',
                                             mix: { block: 'todos', elem: 'filter' },
-                                            mods: { pseudo: true },
                                             url: '#/active',
                                             content: 'Active'
                                         },
                                         {
                                             block: 'link',
                                             mix: { block: 'todos', elem: 'filter' },
-                                            mods: { pseudo: true },
                                             url: '#/completed',
                                             content: 'Completed'
                                         }
@@ -126,7 +134,21 @@
                                     ],
                                     mods : { theme: 'simple', size: 's' },
                                     content: [
-                                        'Clear completed (1)'
+                                        'Clear completed (',
+                                        {
+                                            elem: 'done-count',
+                                            tag: 'span',
+                                            mix: {
+                                                block: 'todos',
+                                                elem: 'model-field',
+                                                js: {
+                                                    name: 'itemsDone',
+                                                    type: 'inline'
+                                                }
+                                            },
+                                            content: 0
+                                        },
+                                        ')'
                                     ]
                                 }
                             ]

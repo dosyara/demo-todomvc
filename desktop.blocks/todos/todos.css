@@ -64,6 +64,17 @@
     border-bottom: 1px solid #ccc;
 }
 
+.todos__items_show_active .todos__item_completed,
+.todos__items_show_completed .todos__item
+{
+    display: none;
+}
+
+.todos__items_show_completed .todos__item_completed
+{
+    display: block;
+}
+
 .todos__item
 {
     padding: 16px;
