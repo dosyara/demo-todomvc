@@ -49,12 +49,17 @@
                                 {
                                     todoId: 1,
                                     done: true,
-                                    text: 'uno'
+                                    text: 'побриться'
                                 },
                                 {
                                     todoId: 2,
+                                    done: true,
+                                    text: 'залить презентацию'
+                                },
+                                {
+                                    todoId: 3,
                                     done: false,
-                                    text: 'due'
+                                    text: 'начать демонстрацию'
                                 }
                             ]
                         },
