@@ -4,6 +4,17 @@ block('todos')(
         return {
             elem: 'item',
             mods: { checked: item.done },
+            mix: {
+                block: 'glue',
+                js: {
+                    modelName: 'm-todo-item',
+                    modelData: {
+                        todoId: item.todoId,
+                        done: item.done,
+                        text: item.text
+                    }
+                }
+            },
             todoId: item.todoId,
             done: item.done,
             text: item.text
@@ -29,6 +40,14 @@ block('todos')(
         {
             elem: 'item-text',
             tag: 'label',
+            mix: {
+                block: 'glue',
+                elem: 'model-field',
+                js: {
+                    name: 'text',
+                    type: 'inline'
+                }
+            },
             content: this.ctx.text
         },
         {
