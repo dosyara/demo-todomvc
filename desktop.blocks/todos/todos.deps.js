@@ -28,7 +28,8 @@
             { block : 'model' },
             { block : 'm-todo-item' },
             { block : 'm-todos' },
-            { block : 'glue' }
+            { block : 'glue' },
+            { block : 'glue-destroy' }
         ],
         shouldDeps : [
         ]

@@ -75,7 +75,20 @@ block('todos')(
         },
         {
             block : 'button',
-            mix: [{ block: 'todos', elem: 'item-delete' }],
+            mix: [
+                { block: 'todos', elem: 'item-delete' },
+                {
+                    block: 'glue-destroy',
+                    js: {
+                        modelParams: {
+                            name: 'm-todo-item',
+                            id: this.ctx.todoId,
+                            parentName: 'm-todos',
+                            parentId: 1
+                        }
+                    }
+                }
+            ],
             mods : { theme : 'simple' },
             text : '✖'
         }
