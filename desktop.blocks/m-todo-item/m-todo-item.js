@@ -5,8 +5,3 @@ modules.define('m-todo-item', ['model'], function(provide, MODEL) {
         text: 'string'
     }));
 });
-
-// hack
-modules.require(['m-todo-item'], function() {
-
-});

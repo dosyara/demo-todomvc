@@ -4,17 +4,6 @@ block('todos')(
         return {
             elem: 'item',
             mods: { checked: item.done },
-            mix: [{
-                block: 'glue',
-                js: {
-                    modelName: 'm-todo-item',
-                    modelData: {
-                        todoId: item.todoId,
-                        done: item.done,
-                        text: item.text
-                    }
-                }
-            }],
             todoId: item.todoId,
             done: item.done,
             text: item.text
@@ -23,21 +12,33 @@ block('todos')(
 
     elem('item').def()(function() {
         this.ctx.mods = this.ctx.mods || {};
-        this.ctx.mods.completed =  this.ctx.done;
+        this.ctx.mods.completed = this.ctx.done;
 
-        this.ctx.mix = this.ctx.mix || [];
-        this.ctx.mix.push({
-            block: 'glue',
-            elem: 'model-field',
-            js: {
-                name: 'done',
-                type: 'mod',
+        this.ctx.mix = [
+            {
+                block: 'glue',
+                js: {
+                    modelParams: {
+                        name: 'm-todo-item',
+                        id: this.ctx.todoId,
+                        parentName: 'm-todos',
+                        parentId: 1
+                    }
+                }
+            },
+            {
+                block: 'glue',
+                elem: 'model-field',
+                js: {
+                    name: 'done',
+                    type: 'mod',
 
-                block: 'todos',
-                elem: 'item',
-                modName: 'completed'
+                    block: 'todos',
+                    elem: 'item',
+                    modName: 'completed'
+                }
             }
-        });
+        ];
 
         applyNext();
     }),

@@ -23,7 +23,29 @@
             content: [
                 {
                     block: 'todos',
-                    js: true,
+                    js: {
+                        modelName: 'm-todos',
+                        modelId: 1,
+                        modelData: {
+                            items: [
+                                {
+                                    todoId: 1,
+                                    done: true,
+                                    text: 'побриться'
+                                },
+                                {
+                                    todoId: 2,
+                                    done: true,
+                                    text: 'залить презентацию'
+                                },
+                                {
+                                    todoId: 3,
+                                    done: false,
+                                    text: 'начать демонстрацию'
+                                }
+                            ]
+                        }
+                    },
                     content: [
                         {
                             elem: 'new-item',
@@ -45,23 +67,7 @@
                         },
                         {
                             elem: 'items',
-                            data: [
-                                {
-                                    todoId: 1,
-                                    done: true,
-                                    text: 'побриться'
-                                },
-                                {
-                                    todoId: 2,
-                                    done: true,
-                                    text: 'залить презентацию'
-                                },
-                                {
-                                    todoId: 3,
-                                    done: false,
-                                    text: 'начать демонстрацию'
-                                }
-                            ]
+                            data: [ ]
                         },
                         {
                             elem: 'actions',
