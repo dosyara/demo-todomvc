@@ -52,7 +52,17 @@
                             content: [
                                 {
                                     block : 'checkbox',
-                                    mix: [{ block: 'todos', elem: 'all-done' }],
+                                    mix: [
+                                        { block: 'todos', elem: 'all-done' },
+                                        {
+                                            block: 'todos',
+                                            elem: 'model-field',
+                                            js: {
+                                                name: 'allDone',
+                                                type: 'checkbox'
+                                            }
+                                        }
+                                    ],
                                     mods : { theme : 'normal', size : 'l', type : 'simple' },
                                     name : 'all-done'
                                 },

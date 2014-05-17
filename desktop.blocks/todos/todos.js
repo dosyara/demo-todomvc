@@ -26,15 +26,15 @@ provide(BEMDOM.decl({ block: this.name, baseBlock: Glue }, {
                 }.bind(this));
 
                 this.model.on('items', 'change', function() {
-                    this._udpateItems();
+                    this._updateItems();
                 }, this);
 
-                this._udpateItems();
+                this._updateItems();
             }
         }
     },
 
-    _udpateItems: function() {
+    _updateItems: function() {
         BEMDOM.update(this.elem('items'), this._buildItems(this.model.toJSON().items));
     },
 
