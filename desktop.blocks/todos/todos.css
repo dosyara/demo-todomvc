@@ -101,6 +101,7 @@
         0 43px 0 -6px rgba(255, 255, 255, 0.8),
         0 44px 2px -6px rgba(0, 0, 0, 0.2);
     bottom: 0;
+    z-index: -1;
 }
 
 .todos__actions

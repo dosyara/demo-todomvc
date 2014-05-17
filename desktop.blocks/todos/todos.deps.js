@@ -26,9 +26,9 @@
         mustDeps : [
             { block : 'i-bem', elems : ['dom', 'i18n'] },
             { block : 'model' },
-            { block : 'glue' },
-            { block : 'glue-destroy' },
-            { block : 'm-todos' }
+            { block : 'm-todo-item' },
+            { block : 'm-todos' },
+            { block : 'glue' }
         ],
         shouldDeps : [
         ]

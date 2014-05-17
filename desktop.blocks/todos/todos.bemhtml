@@ -1,0 +1,42 @@
+block('todos')(
+
+    elem('items').content()(this.ctx.data && this.ctx.data.map(function(item) {
+        return {
+            elem: 'item',
+            mods: { checked: item.done },
+            todoId: item.todoId,
+            done: item.done,
+            text: item.text
+        }
+    })),
+
+    elem('item').def()(function() {
+        this.ctx.mods = this.ctx.mods || {};
+        this.ctx.mods.completed =  this.ctx.done;
+
+        applyNext();
+    }),
+
+    elem('item').content()([
+        {
+            block : 'checkbox',
+            mix: [
+                { block: 'todos', elem: 'done' }
+            ],
+            mods : { theme : 'normal', size : 'm', type : 'simple', checked: !!this.ctx.done },
+            name : 'done'
+        },
+        {
+            elem: 'item-text',
+            tag: 'label',
+            content: this.ctx.text
+        },
+        {
+            block : 'button',
+            mix: [{ block: 'todos', elem: 'item-delete' }],
+            mods : { theme : 'simple' },
+            text : '✖'
+        }
+    ])
+
+);

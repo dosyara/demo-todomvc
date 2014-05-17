@@ -23,6 +23,7 @@
             content: [
                 {
                     block: 'todos',
+                    js: true,
                     content: [
                         {
                             elem: 'new-item',
@@ -44,52 +45,16 @@
                         },
                         {
                             elem: 'items',
-                            content: [
+                            data: [
                                 {
-                                    elem: 'item',
-                                    mods: { completed: true },
-                                    content: [
-                                        {
-                                            block : 'checkbox',
-                                            mix: [{ block: 'todos', elem: 'done' }],
-                                            mods : { theme : 'normal', size : 'm', type : 'simple', checked: true },
-                                            name : 'done'
-                                        },
-                                        {
-                                            elem: 'item-text',
-                                            tag: 'label',
-                                            content: 'uno'
-                                        },
-                                        {
-                                            block : 'button',
-                                            mix: [{ block: 'todos', elem: 'item-delete' }],
-                                            mods : { theme : 'simple' },
-                                            text : '✖'
-                                        }
-                                    ]
+                                    todoId: 1,
+                                    done: true,
+                                    text: 'uno'
                                 },
                                 {
-                                    elem: 'item',
-                                    mods: { completed: false },
-                                    content: [
-                                        {
-                                            block : 'checkbox',
-                                            mix: [{ block: 'todos', elem: 'done' }],
-                                                mods : { theme : 'normal', size : 'm', type : 'simple', checked: false },
-                                            name : 'done'
-                                        },
-                                        {
-                                            elem: 'item-text',
-                                            tag: 'label',
-                                            content: 'due'
-                                        },
-                                        {
-                                            block : 'button',
-                                            mix: [{ block: 'todos', elem: 'item-delete' }],
-                                            mods : { theme : 'simple' },
-                                            text : '✖'
-                                        }
-                                    ]
+                                    todoId: 2,
+                                    done: false,
+                                    text: 'due'
                                 }
                             ]
                         },
